@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Decor3D - Contacto</title>
+  <meta name="description"
+    content="Ponete en contacto con Decor3D para realizar consultas, recibir asesoramiento o solicitar productos personalizados.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-body-secondary sticky-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand ms-auto fw-bold fs-4" href="index.html">Decor3D</a>
+
+      <div class="d-lg-none ms-auto">
+        <button class="btn nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
+          <i class="bi bi-bag-fill"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Productos
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="iluminacion.html">Iluminación</a></li>
+              <li><a class="dropdown-item" href="macetas.html">Macetas</a></li>
+              <li><a class="dropdown-item" href="jarrones.html">Jarrones</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav d-none d-lg-flex">
+          <li class="nav-item">
+            <button class="btn nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
+              <i class="bi bi-bag-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ 
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito" aria-labelledby="offcanvasCarritoLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasCarritoLabel">Carrito</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body" id="contenido-carrito">
+      <div id="mensaje-carrito-vacio" class="text-center text-muted">
+        <p class="mb-3">Tu carrito está vacío</p>
+        <a href="index.html" class="btn btn-primary">Seguir comprando</a>
+      </div>
+    </div>
+    <div class="p-3 border-top d-none" id="offcanvas-footer">
+      <div class="d-flex justify-content-between mb-3">
+        <strong>Total:</strong>
+        <span id="carrito-total" class="fw-bold">$0</span>
+      </div>
+      <div class="d-grid gap-2">
+        <button class="btn btn-primary" onclick="finalizarCompra()">Finalizar compra</button>
+        <a href="categorias.html" class="btn btn-outline-primary">Seguir comprando</a>
+
+      </div>
+    </div>
+  </div>
+
+  
+  <section class="container my-5">
+    <h2 class="text-center mb-2">Contacto</h2>
+    <p class="text-center mb-4 fs-5">¿Tiene alguna duda?</p>
+
+    <form id="form-contacto" class="mx-auto needs-validation" style="max-width: 600px;" novalidate>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" required>
+        <div class="invalid-feedback">Por favor, ingrese su nombre.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="email" required>
+        <div class="invalid-feedback">Ingrese un correo válido.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+        <div class="invalid-feedback">Escriba su mensaje.</div>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+    </form>
+  </section>
+
+ 
+  <div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalConfirmacionLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalConfirmacionLabel">Formulario enviado</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          ¡Gracias por contactarnos! Te responderemos a la brevedad.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-3 mt-4 ">
+    <div class="container">
+      <h3 class="nav justify-content-center fw-bold my-5">Decor3D</h3>
+      <ul class="nav justify-content-center border-bottom border-secondary pb-3 mb-3 text-center">
+        <li class="nav-item">
+          <a href="https://www.facebook.com/" target="_blank" class="nav-link px-2">
+            <i class="bi bi-facebook mx-2 fs-4"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.instagram.com/" target="_blank" class="nav-link px-2">
+            <i class="bi bi-instagram mx-2 fs-4"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.linkedin.com/" target="_blank" class="nav-link px-2">
+            <i class="bi bi-linkedin mx-2 fs-4"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.youtube.com/" target="_blank" class="nav-link px-2">
+            <i class="bi bi-youtube mx-2 fs-4"></i>
+          </a>
+        </li>
+      </ul>
+
+      <p class="text-center text-secondary">© 2025 Decor3D</p>
+    </div>
+  </footer>
+
+  
+  <script src="carrito.js"></script>
+  <script src="productos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const form = document.getElementById('form-contacto');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      if (form.checkValidity()) {
+        const modal = new bootstrap.Modal(document.getElementById('modalConfirmacion'));
+        modal.show();
+        form.reset();
+        form.classList.remove('was-validated');
+      } else {
+        form.classList.add('was-validated');
+      }
+    });
+  </script>
+
+</body>
+
+</html>

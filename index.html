@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Decor3D - Inicio</title>
+    <meta name="description"
+        content="Decor3D: objetos decorativos personalizados en impresión 3D. Iluminación, jarrones y macetas para tu hogar.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-secondary sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand ms-auto fw-bold fs-4" href="index.html">Decor3D</a>
+
+            <div class="d-lg-none ms-auto">
+                <button class="btn nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
+                    <i class="bi bi-bag-fill"></i>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="iluminacion.html">Iluminación</a></li>
+                            <li><a class="dropdown-item" href="macetas.html">Macetas</a></li>
+                            <li><a class="dropdown-item" href="jarrones.html">Jarrones</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav d-none d-lg-flex">
+                    <li class="nav-item">
+                        <button class="btn nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
+                            <i class="bi bi-bag-fill"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito"
+            aria-labelledby="offcanvasCarritoLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasCarritoLabel">Carrito</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+            </div>
+            <div class="offcanvas-body" id="contenido-carrito">
+                <div id="mensaje-carrito-vacio" class="text-center text-muted">
+                    <p class="mb-3">Tu carrito está vacío</p>
+                    <a href="index.html" class="btn btn-primary">Seguir comprando</a>
+                </div>
+            </div>
+            <div class="p-3 border-top d-none" id="offcanvas-footer">
+                <div class="d-flex justify-content-between mb-3">
+                    <strong>Total:</strong>
+                    <span id="carrito-total" class="fw-bold">$0</span>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" onclick="finalizarCompra()">Finalizar compra</button>
+                    <a href="categorias.html" class="btn btn-outline-primary">Seguir comprando</a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5 ">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start">
+                    <img src="img/Maceta_Trihex.jpg" class="img-fluid rounded" alt="Maceta Trihex impresa en 3D">
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">DECORACIÓN IMPRESA EN 3D QUE INSPIRA</h1>
+                    <p class="lead">Diseños modernos, únicos y listos para darle vida a tu hogar</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a href="categorias.html" class="btn btn-primary btn-lg px-4 me-md-2">Ver productos</a>
+                        <a href="#ideas" class="btn btn-outline-primary btn-lg px-4">Ideas Deco</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5 ">
+            <h2 class="mb-5 text-center ">Productos Destacados</h2>
+            <div id="carruselDestacados" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+                <div class="carousel-inner" id="carrusel-items">
+
+                </div>
+            </div>
+        </div>
+
+        <section class="container my-5" id="ideas">
+            <h2 class="text-center mb-2">Ideas para decorar tu hogar</h2>
+            <p class="text-center mb-5 fs-5">Inspirá tu espacio con nuestras piezas 3D</p>
+
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6 order-1 order-md-1 mb-4 mb-md-0">
+                    <img src="img/Lampara_Colgante_Invader.jpg" alt="Lámpara colgante 3D" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6 order-2 order-md-2">
+                    <p class="text-muted fw-semibold">ILUMINACIÓN</p>
+                    <h3 class="fw-bold mb-3">Iluminación colgante con diseño fluido</h3>
+                    <p>Su estructura geométrica,
+                        impresa en PLA de alta calidad, crea un efecto visual único que transforma cualquier ambiente.
+                        Ideal para espacios modernos o minimalistas, proyecta sombras suaves y envolventes que aportan
+                        carácter sin sobrecargar el entorno. Disponible en múltiples tamaños y colores, es perfecta para
+                        colgar sobre mesas de comedor, livings o rincones de lectura.</p>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0">
+                    <img src="img/Jarron_Organic.jpg" alt="Jarrón orgánico impreso en 3D" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6 order-2 order-md-1">
+                    <p class="text-muted fw-semibold">JARRONES</p>
+                    <h3 class="fw-bold mb-3">Jarrones con formas orgánicas</h3>
+                    <p>Inspirados en la fluidez de la naturaleza, estos jarrones impresos
+                        en 3D combinan diseño contemporáneo con líneas suaves y envolventes. Colocalos sobre un aparador
+                        con luz lateral para resaltar sus curvas, que proyectan sombras decorativas y dan vida a cada
+                        rincón. Son piezas versátiles que funcionan como acento en estanterías, mesas o centros de mesa,
+                        aportando calidez, textura y personalidad a tu hogar..</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container my-5">
+            <h2 class="text-center">Preguntas Frecuentes</h2>
+            <p class="lead text-center mb-5">Respondemos tus dudas sobre materiales, envíos y más</p>
+
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq1-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1"
+                            aria-expanded="true" aria-controls="faq1">
+                            ¿De qué material están hechas las piezas?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1-header"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Usamos PLA, un plástico biodegradable ideal para impresión 3D y objetos decorativos.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq2-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                            ¿Qué características tiene el material?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-header"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            El PLA es duradero, ligero y biodegradable. Soporta humedad moderada y es fácil de mantener.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq3-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                            ¿Cuánto demora el envío y qué disponibilidad tienen los productos?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-header"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Los envíos tardan entre 3 y 7 días hábiles. Las piezas se imprimen bajo pedido.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mt-4 fw-bold">Si todavía tienes preguntas contactanos</p>
+        </section>
+    </main>
+
+    <footer class="py-3 mt-4">
+        <div class="container">
+            <h3 class="nav justify-content-center fw-bold my-5">Decor3D</h3>
+            <ul class="nav justify-content-center border-bottom border-secondary pb-3 mb-3 text-center">
+                <li class="nav-item">
+                    <a href="https://www.facebook.com/" target="_blank" class="nav-link px-2">
+                        <i class="bi bi-facebook mx-2 fs-4"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.instagram.com/" target="_blank" class="nav-link px-2">
+                        <i class="bi bi-instagram mx-2 fs-4"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.linkedin.com/" target="_blank" class="nav-link px-2">
+                        <i class="bi bi-linkedin mx-2 fs-4"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.youtube.com/" target="_blank" class="nav-link px-2">
+                        <i class="bi bi-youtube mx-2 fs-4"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="text-center text-secondary">© 2025 Decor3D</p>
+        </div>
+    </footer>
+
+
+    <script src="carrito.js"></script>
+    <script src="productos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
