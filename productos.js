@@ -5,7 +5,7 @@ window.productos = [
     nombre: "Lámpara Colgante Virus",
     categoria: "Iluminación",
     precio: 4200,
-    imagen: "/img/Lampara_Colgante_Virus.jpg",
+    imagen: "img/Lampara_Colgante_Virus.jpg",
     descripcion: "Lámpara colgante con diseño orgánico que combina arte y funcionalidad. Ideal para espacios modernos y cálidos."
   },
   {
@@ -13,7 +13,7 @@ window.productos = [
     nombre: "Lámpara Colgante Vori",
     categoria: "Iluminación",
     precio: 4400,
-    imagen: "/img/Lampara_Colgante_Vori.jpg",
+    imagen: "img/Lampara_Colgante_Vori.jpg",
     descripcion: "Diseño colgante minimalista con acabado mate. Perfecta para iluminar tu comedor o pasillo."
   },
   {
@@ -21,7 +21,7 @@ window.productos = [
     nombre: "Lámpara de Mesa Zig",
     categoria: "Iluminación",
     precio: 4100,
-    imagen: "/img/Lampara_Mesa_Zig.jpg",
+    imagen: "img/Lampara_Mesa_Zig.jpg",
     descripcion: "Lámpara de mesa con diseño zigzagueante, moderna y compacta. Ideal para escritorios o mesas auxiliares."
   },
   {
@@ -29,7 +29,7 @@ window.productos = [
     nombre: "Lámpara de Mesa Exo",
     categoria: "Iluminación",
     precio: 4300,
-    imagen: "/img/Lampara_Mesa_Exo.jpg",
+    imagen: "img/Lampara_Mesa_Exo.jpg",
     descripcion: "Lámpara con estructura exoesquelética, mezcla de diseño futurista y practicidad."
   },
 
@@ -39,7 +39,7 @@ window.productos = [
     nombre: "Maceta Adoquín",
     categoria: "Macetas",
     precio: 4200,
-    imagen: "/img/Maceta_Adoquin.jpg",
+    imagen: "img/Maceta_Adoquin.jpg",
     descripcion: "Maceta con textura de adoquines, ideal para decorar interiores rústicos o patios con estilo natural."
   },
   {
@@ -47,7 +47,7 @@ window.productos = [
     nombre: "Maceta Bloom",
     categoria: "Macetas",
     precio: 4400,
-    imagen: "/img/Maceta_Bloom.jpg",
+    imagen: "img/Maceta_Bloom.jpg",
     descripcion: "Diseño floral suave y redondeado, perfecta para plantas pequeñas y suculentas."
   },
   {
@@ -55,7 +55,7 @@ window.productos = [
     nombre: "Maceta Torio",
     categoria: "Macetas",
     precio: 4100,
-    imagen: "/img/Maceta_Torio.jpg",
+    imagen: "img/Maceta_Torio.jpg",
     descripcion: "Maceta con patrón radial inspirado en elementos atómicos. Estilo único para decoraciones modernas."
   },
   {
@@ -63,7 +63,7 @@ window.productos = [
     nombre: "Maceta Tri-Wave",
     categoria: "Macetas",
     precio: 4300,
-    imagen: "/img/Maceta_Tri-Wave.jpg",
+    imagen: "img/Maceta_Tri-Wave.jpg",
     descripcion: "Maceta con ondas triangulares en relieve. Moderna, elegante y resistente."
   },
 
@@ -73,7 +73,7 @@ window.productos = [
     nombre: "Jarrón Cadena",
     categoria: "Jarrones",
     precio: 4200,
-    imagen: "/img/Jarron_Cadena.jpg",
+    imagen: "img/Jarron_Cadena.jpg",
     descripcion: "Jarrón decorativo con patrón de eslabones entrelazados. Ideal para ambientes industriales."
   },
   {
@@ -81,7 +81,7 @@ window.productos = [
     nombre: "Jarrón Escamas de Dragon",
     categoria: "Jarrones",
     precio: 4400,
-    imagen: "/img/Jarron_Escamas-Dragon.jpg",
+    imagen: "img/Jarron_Escamas-Dragon.jpg",
     descripcion: "Diseño escamado inspirado en dragones orientales. Una pieza que resalta en cualquier espacio."
   },
   {
@@ -89,7 +89,7 @@ window.productos = [
     nombre: "Jarrón Exo",
     categoria: "Jarrones",
     precio: 4100,
-    imagen: "/img/Jarron_Exo.jpg",
+    imagen: "img/Jarron_Exo.jpg",
     descripcion: "Jarrón moderno con cortes angulados. Perfecto para decoración minimalista."
   },
   {
@@ -97,7 +97,7 @@ window.productos = [
     nombre: "Jarrón Yao",
     categoria: "Jarrones",
     precio: 4300,
-    imagen: "/img/Jarron_Yao.jpg",
+    imagen: "img/Jarron_Yao.jpg",
     descripcion: "Estilo clásico con curvas suaves. Inspirado en la cerámica tradicional china Yao."
   }
 ];
